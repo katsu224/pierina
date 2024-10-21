@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="rocoDev">
+    <meta name="description" content="Portfolio de rocoDev">
+    <meta name="keywords" content="Portfolio, rocodev">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Landing Page HTML CSS</title>
+    <style>
+        .mainTop {
+            height: 70vh;
+            background-image: url(../img/blonde-woman-getting-hair-washed-salon_23-2148332479-transformed.jpeg);
+            background-size: cover;
+            background-position-x: 50%;
+            background-position-y: 0%;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .mainTop::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 70%;
+            background-color: rgba(0, 0, 0, 0.712);
+        }
+
+        .textCentral {
+            width: 80%;
+            height: auto;
+            backdrop-filter: blur(2px);
+            border-radius: 30px;
+            box-shadow: 0px 0px 5px .2px rgba(255, 255, 255, 0.075);
+            text-align: center;
+            color: white;
+            padding: 6%;
+            display: grid;
+            place-content: center;
+            margin-top: 9%;
+            gap: 20px;
+
+            .text {
+                font-size: 3rem;
+            }
+
+            hr {
+                width: 10%;
+                margin: auto;
+            }
+
+            button {
+                width: auto;
+                margin: auto;
+                color: white;
+                border: none;
+                font-size: 1rem;
+                border-radius: 10px;
+                background-color: rgba(241, 167, 6, 0.884);
+                padding: 2% 7%;
+            }
+        }
+
+        .separador {
+            height: 6vh;
+            background-image: url(../img/separador.jpg);
+            background-size: cover;
+            background-position: 30%;
+        }
+
+        .mainCenter {
+            background-image: url(../img/shape-1.png);
+            width: auto;
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-basis: 1;
+            flex-wrap: wrap;
+            padding: 8%;
+            gap: 50px;
+
+            .bigColumn {
+                flex: 1 1 600px;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                height: auto;
+                width: 100%;
+
+                .bigColumnFirst {
+                    width: auto;
+                    padding: 7%;
+                    display: flex;
+                    text-align: start;
+                    font-size: 1.9rem;
+                    flex-direction: column;
+                    gap: 40px;
+                    background-repeat: no-repeat;
+                    background-position-y: 90%;
+                    background-image: url(../img/wave-3.png);
+
+                    img {
+                        width: 70%;
+                    }
+                }
+
+                .bigColumnSecond {
+                    width: auto;
+                    padding: 7%;
+
+                    p {
+                        font-size: 1.2rem;
+                    }
+
+                    ul {
+                        list-style: square url() inside;
+                        padding: 10px;
+
+                        li {
+                            margin: 10px;
+                        }
+                    }
+
+                    display: flex;
+                    gap: 20px;
+                    flex-direction: column;
+
+                    .imgs {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+
+                        .caja {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: rgb(235, 108, 4);
+                            padding: 10px;
+                            margin: 5px;
+                            border-radius: 10px;
+
+                            p {
+                                font-size: 1rem;
+
+                            }
+
+                            img {
+                                width: 20%;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .smallColumn {
+                flex: 1 1 300px;
+                display: grid;
+                grid-template-columns: 1fr;
+
+                height: auto;
+
+                .rowSmall {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 15%;
+                    color: white;
+                    font-weight: bold;
+                    background-color: rgb(228, 102, 18);
+                }
+
+                .rowBig {
+                    padding: 10% 15%;
+                    background-color: rgba(255, 234, 207, 0.589);
+
+                    h3 {
+                        font-size: 2rem;
+                    }
+
+                    .horario {
+                        margin-top: 6%;
+                        display: grid;
+                        gap: 10px;
+
+                        .horarioHora {
+                            font-size: 1.4rem;
+                            color: rgb(190, 111, 7);
+                        }
+                    }
+                }
+            }
+        }
+
+        .wsp {
+            width: 50px;
+            background-color: rgb(247, 250, 253);
+            border-radius: 50%;
+            aspect-ratio: 1/1;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            animation: move 1.2s infinite;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        @keyframes move {
+
+            0% {
+                bottom: 20px;
+            }
+
+            50% {
+                bottom: 30px;
+            }
+
+            100% {
+                bottom: 20px;
+            }
+        }
+
+        .mainEnd {
+            padding: 10%;
+            background-color: #fcf4f0;
+
+            h2 {
+                font-size: 2rem;
+                text-align: center;
+
+            }
+
+            .servicios {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 30px;
+                padding: 2%;
+
+                .serCaja {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    background-color: white;
+
+                    img {
+                        max-width: 100%;
+                        height: 100%;
+                    }
+
+                    .textcajaser {
+                        padding: 7%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+
+                        .nomPri {
+                            display: grid;
+                            grid-template-columns: 2fr 1fr;
+
+                            h5 {
+                                font-size: 1.4rem;
+                            }
+
+                            .precio {
+                                background-color: rgb(240, 150, 98);
+                                text-align: end;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 10px;
+                                color: rgb(0, 0, 0);
+                            }
+                        }
+
+                        .descser {
+                            font-size: .8rem;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .text-hover {
+            display: none;
+        }
+
+        .precio:hover .text-default {
+            display: none;
+        }
+
+        .precio:hover .text-hover {
+            display: inline;
+        }
+
+        /*
+   footer
+   */
+        .footer {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+            gap: 20px;
+            padding: 50px;
+            background-color: #222;
+            color: rgb(197, 192, 192);
+        }
+
+        .footer-section h3 {
+            margin-bottom: 15px;
+            font-size: 18px;
+            text-transform: uppercase;
+            color: #f0c040;
+        }
+
+        .footer-section p,
+        .footer-section li {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .contact-info {
+            list-style: none;
+        }
+
+        .social-icons a {
+            font-family: "FontAwesome";
+            text-decoration: none;
+            color: white;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        .map-placeholder iframe {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .latest-posts ul {
+            list-style: none;
+        }
+
+        .latest-posts li {
+            margin-bottom: 10px;
+        }
+
+        .twitter-feed p {
+            margin-bottom: 10px;
+        }
+        .header--scrolled{
+            background-color: #222;
+        }
+ 
+    </style>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="navbar">
+            <h1 class="navbar__logo"><img src="img/logo.png" alt="" width="200vw"></h1>
+            <div class="icon__container" id="icon__container">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="navbar__icon navbar__openIcon"
+                    id="navbar__openIcon" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="navbar__icon navbar__closeIcon"
+                    id="navbar__closeIcon" viewBox="0 0 16 16">
+                    <path
+                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                </svg>
+            </div>
+            <ul class="navbar__ul" id="navbar__ul">
+                <li class="navbar__li">
+                    <a href="#top" class="navbar__link">Inicio</a>
+                </li>
+                <li class="navbar__li">
+                    <a href="#Sobremi" class="navbar__link">Sobre mí</a>
+                </li>
+                <li class="navbar__li">
+                    <a href="#" class="navbar__link">Galeria</a>
+                </li>
+                <li class="navbar__li">
+                    <a href="#" class="navbar__link">Servicios</a>
+                </li>
+                <li class="navbar__li">
+                    <a href="#" class="navbar__link">Contactanos</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="mainTop" id="top">
+            <div class="textCentral">
+                <div class="text">
+                    Salon de Belleza
+                </div>
+                <hr>
+                <p>
+                    En Corte y Glamur, realzamos tu belleza con cortes y estilos personalizados, combinando elegancia y
+                    tendencia para que siempre luzcas increíble.
+                </p>
+                <button>
+                    Reservar Cita
+                </button>
+            </div>
+        </div>
+        <div class="mainCenter">
+            <div class="bigColumn" id="Sobremi">
+                <div class="bigColumnFirst">
+                    <h3>
+                        EL LUGAR ADECUADO PARA TU CABELLO
+                    </h3>
+                    <img src="img/about-1.jpg" alt="">
+                </div>
+                <div class="bigColumnSecond">
+                    <p>
+                        "Ofrecemos todos los servicios de peluquería en tu zona con la mejor calidad que puedas imaginar
+                        de un salón."
+                    </p>
+                    <ul class="listaBig">
+                        <li>
+                            Corte de cabello
+                        </li>
+                        <li>
+                            Coloración
+                        </li>
+                        <li>
+                            Peinados y estilizado
+                        </li>
+                        <li>
+                            Tratamientos capilares
+                        </li>
+                        <li>
+                            Alisado y permanentes
+                        </li>
+
+                    </ul>
+                    <div class="imgs">
+                        <div class="caja">
+                            <img src="img/scissors.png" alt="">
+                            <p>CORTE DE PELO</p>
+                        </div>
+
+                        <div class="caja">
+                            <img src="img/scissors.png" alt="">
+                            <p>COLOR DE PELO</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="smallColumn">
+                <div class="rowSmall">
+                    <p>
+                        “Pierina” en San Juan de Chimbote.
+                    </p>
+                </div>
+                <div class="rowBig">
+                    <h3>
+                        Horario
+                    </h3>
+                    <div class="horario">
+                        <p class="horarioDia">
+                            Lunes
+                        </p>
+                        <p class="horarioHora">
+                            12:00 pm - 19:00 pm
+                        </p>
+                    </div>
+                    <div class="horario">
+                        <p class="horarioDia">
+                            Martes a Jueves
+                        </p>
+                        <p class="horarioHora">
+                            12:00 pm - 19:00 pm
+                        </p>
+                    </div>
+                    <div class="horario">
+                        <p class="horarioDia">
+                            Viernes
+                        </p>
+                        <p class="horarioHora">
+                            12:00 pm - 19:00 pm
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mainEnd">
+            <h2>
+                NUESTROS SERVICIOS
+            </h2>
+            <div class="servicios">
+                <div class="serCaja">
+                    <img src="img/service-1.jpg" alt="">
+                    <div class="textcajaser">
+                        <div class="nomPri">
+                            <h5>
+                                CORTE DE PELO
+                            </h5>
+                            <a href="" class="precio">
+
+                                <span class="text-default"> S/. 30.00</span>
+
+                                <span class="text-hover"> Reserva</span>
+
+
+                            </a>
+
+                        </div>
+                        <p class="descser">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="serCaja">
+                    <img src="https://www.latercera.com/resizer/v2/RDA6U4BBUNHZ7M5QGVOBBQZSA4.jpg?quality=80&smart=true&auth=6d414e238d15025775f493c05b7d7acb49d5fe978793c881868fb7b71d940347&width=790&height=527"  alt="">
+                    <div class="textcajaser">
+                        <div class="nomPri">
+                            <h5>
+                                COLORACION
+                            </h5>
+                            <a href="" class="precio">
+
+                                <span class="text-default"> S/. 30.00</span>
+
+                                <span class="text-hover"> Reserva</span>
+
+
+                            </a>
+
+                        </div>
+                        <p class="descser">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="serCaja">
+                    <img src="https://st4allthings4p4ci.blob.core.windows.net/allthingshair/allthingshair/wp-content/uploads/sites/13/2023/04/12160717/peinados-con-trenzas-y-pelo-suelto-28.jpg" alt="">
+                    <div class="textcajaser">
+                        <div class="nomPri">
+                            <h5>
+                              PEINADOS Y ESTILADOS
+                            </h5>
+                            <a href="" class="precio">
+
+                                <span class="text-default"> S/. 30.00</span>
+
+                                <span class="text-hover"> Reserva</span>
+
+
+                            </a>
+
+                        </div>
+                        <p class="descser">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="serCaja">
+                    <img src="https://cypes.grupoeurohispana.com/img/profesion/1036/recurso-principal-22155919.jpg" alt="">
+                    <div class="textcajaser">
+                        <div class="nomPri">
+                            <h5>
+                              TRABAJO CAPILARES
+                            </h5>
+                            <a href="" class="precio">
+
+                                <span class="text-default"> S/. 30.00</span>
+
+                                <span class="text-hover"> Reserva</span>
+
+
+                            </a>
+
+                        </div>
+                        <p class="descser">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="serCaja">
+                    <img src="https://st4allthings4p4ci.blob.core.windows.net/allthingshair/allthingshair/wp-content/uploads/sites/5/2016/12/peinados-de-permanente-2.jpg" alt="">
+                    <div class="textcajaser">
+                        <div class="nomPri">
+                            <h5>
+                              ALISADO Y PERMANENTE
+                            </h5>
+                            <a href="" class="precio">
+
+                                <span class="text-default"> S/. 30.00</span>
+
+                                <span class="text-hover"> Reserva</span>
+
+
+                            </a>
+
+                        </div>
+                        <p class="descser">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="serCaja">
+                    <img src="https://img.freepik.com/fotos-premium/variedad-pelucas-estantes-peluqueria_118478-6321.jpg" alt="">
+                    <div class="textcajaser">
+                        <div class="nomPri">
+                            <h5>
+                               EXTENSIONES Y PELUCAS
+                            </h5>
+                            <a href="" class="precio">
+
+                                <span class="text-default"> S/. 30.00</span>
+
+                                <span class="text-hover"> Reserva</span>
+
+
+                            </a>
+
+                        </div>
+                        <p class="descser">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="galeria">
+       
+            <div class="child-page-listing">
+
+                <h2 style="text-align: center;">GALERIA</h2>
+              
+                <div class="grid-container">
+              
+                  <article id="3685" class="location-listing">
+              
+                    <a class="location-title" href="#">
+                        Los mejores         </a>
+              
+                    <div class="location-image">
+                      <a href="#">
+                          <img width="300" height="169" src="https://i.pinimg.com/564x/cb/62/9f/cb629f4fcfb6a7d008892c84c21277fa.jpg" alt="san francisco">    </a>
+              
+                    </div>
+              
+                  </article>
+              
+                  <article id="3688" class="location-listing">
+              
+                    <a class="location-title" href="#">
+                        Clientes felices            </a>
+              
+                    <div class="location-image">
+                      <a href="#">
+                          <img width="300" height="169" src="https://i.pinimg.com/564x/c7/9a/4d/c79a4d564e12f75cb6f2e29fb8e7104a.jpg" alt="london">  </a>
+              
+                    </div>
+              
+                  </article>
+              
+                  <article id="3691" class="location-listing">
+              
+                    <a class="location-title" href="#">
+                        100% Efectivos           </a>
+              
+                    <div class="location-image">
+                      <a href="#">
+                          <img width="300" height="169" src="https://i.pinimg.com/564x/92/a1/a8/92a1a8e11fd6ace6fe3c077a4f9b7c27.jpg" alt="new york">  </a>
+              
+                    </div>
+              
+                  </article>
+              
+                  <article id="3694" class="location-listing">
+              
+                    <a class="location-title" href="#">
+                        Mejores productos          </a>
+              
+                    <div class="location-image">
+                      <a href="#">
+                          <img width="300" height="169" src="https://i.pinimg.com/564x/88/d6/1c/88d61c25c8a0c3d4865bd0e85593ee4b.jpg" alt="cape town">  </a>
+              
+                    </div>
+              
+                  </article>
+              
+                  <article id="3697" class="location-listing">
+              
+                    <a class="location-title" href="#">
+                        El mejor servicio           </a>
+              
+                    <div class="location-image">
+                      <a href="#">
+                          <img width="300" height="169" src="https://i.pinimg.com/564x/e6/75/fd/e675fd412380e954462f1761388b0a48.jpg" alt="beijing">    </a>
+              
+                    </div>
+              
+                  </article>
+              
+                  <article id="3700" class="location-listing">
+              
+                    <a class="location-title" href="#">
+                        Paris           </a>
+              
+                    <div class="location-image">
+                      <a href="#">
+                          <img width="300" height="169" src="https://i.pinimg.com/564x/d5/5d/5b/d55d5b59d4f1f8aeca02294e350bd584.jpg" alt="paris">          
+                        </a>
+                    </div>
+              
+                  </article>
+              
+                </div>
+                <!-- end grid container -->
+              
+              </div>
+              
+        </div>
+    </main>
+    <aside class="wsp">
+        <a href="">
+            <img src="../img/whatsapp.png" alt="Whatsapp">
+
+        </a>
+    </aside>
+    <footer class="footer">
+        <div class="footer-section about">
+            <h3>CORTE Y GLAMUR 'PIERINA'</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, mollitia.</p>
+            <ul class="contact-info">
+                <li>+51 954542361</li>
+                <li>info@gmail.com</li>
+            </ul>
+            <div class="social-icons">
+                <a href="#">&#xf16d;</a> <!-- Instagram icon (font-awesome) -->
+                <a href="#">&#xf099;</a> <!-- Twitter icon -->
+                <a href="#">&#xf09a;</a> <!-- Facebook icon -->
+            </div>
+        </div>
+
+        <div class="footer-section twitter-feed">
+            <h3>TWITTER</h3>
+            <p>Check out our latest offers! #CompanyOffers</p>
+            <p>New blog post: The Future of Tech #TechTrends</p>
+        </div>
+
+        <div class="footer-section latest-posts">
+            <h3>ULTIMA NOTICIA</h3>
+            <ul>
+                <li>Nuevos productos - Jan 20, 2024</li>
+                <li>Ventas - Dec 15, 2023</li>
+            </ul>
+        </div>
+
+        <div class="footer-section contact-us">
+            <h3>CONTACTANOS</h3>
+            <div class="map-placeholder">
+                <!-- Placeholder for map image -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d414.1059718972008!2d-78.55952719926285!3d-9.09450966495536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2spe!4v1729534590575!5m2!1ses!2spe"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
